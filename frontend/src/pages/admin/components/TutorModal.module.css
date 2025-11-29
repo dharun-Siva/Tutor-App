@@ -1,0 +1,1107 @@
+.tutorModal {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 9999 !important;
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.tutorModal .modal-dialog {
+  width: 90% !important;
+  max-width: 1400px !important;
+  min-height: 85vh !important;
+  height: 90vh !important;
+  max-height: calc(100vh - 40px) !important;
+  position: relative !important;
+  z-index: 10000 !important;
+  animation: slideUp 0.3s ease-out;
+  margin: 0 auto !important;
+  visibility: visible !important;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.tutorModal .modal-content {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  display: flex !important;
+  flex-direction: column;
+  background-color: #ffffff;
+  overflow: hidden;
+  height: 100%;
+  min-height: 85vh;
+  max-height: calc(100vh - 40px);
+  position: relative;
+  visibility: visible !important;
+}
+
+.tutorModal .modal-body {
+  overflow-y: auto;
+  flex: 1;
+  background-color: #ffffff;
+  padding: 40px 50px;
+  min-height: calc(85vh - 200px);
+  max-height: calc(100vh - 200px);
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #f1f1f1;
+  font-size: 15px;
+}
+
+.tutorModal .modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tutorModal .modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.tutorModal .modal-body::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.tutorModal .modal-body::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Custom Modal Classes */
+.tutorModal .modalDialog {
+  width: 90% !important;
+  max-width: 1200px !important;
+  min-height: 85vh !important;
+  height: 90vh !important;
+  max-height: calc(100vh - 40px) !important;
+  position: relative !important;
+  z-index: 10000 !important;
+  animation: slideUp 0.3s ease-out;
+  margin: 0 auto !important;
+  visibility: visible !important;
+}
+
+.tutorModal .modalContent {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  display: flex !important;
+  flex-direction: column;
+  background-color: #ffffff;
+  overflow: hidden;
+  height: 100%;
+  min-height: 85vh;
+  max-height: calc(100vh - 40px);
+  position: relative;
+  visibility: visible !important;
+}
+
+.tutorModal .modalHeader {
+  background: linear-gradient(135deg, #445e8d, #3a5078);
+  color: white;
+  border-radius: 16px 16px 0 0;
+  padding: 24px 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.tutorModal .headerContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.tutorModal .modalTitle {
+  font-weight: 600;
+  margin: 0;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.tutorModal .closeButton {
+  color: white;
+  opacity: 0.8;
+  text-shadow: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.tutorModal .closeButton:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.tutorModal .modalBody {
+  overflow-y: auto;
+  flex: 1;
+  background-color: #ffffff;
+  padding: 40px 50px;
+  min-height: calc(85vh - 200px);
+  max-height: calc(100vh - 200px);
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #f1f1f1;
+  visibility: visible !important;
+  font-size: 15px;
+}
+
+.tutorModal .modalBody::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tutorModal .modalBody::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.tutorModal .modalBody::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.tutorModal .modalBody::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+.tutorModal .modalFooter {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  border-radius: 0 0 16px 16px;
+  padding: 20px 40px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.tutorModal .navigationButtons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.tutorModal .modal-header {
+  background: linear-gradient(135deg, #445e8d, #3a5078);
+  color: white;
+  border-radius: 16px 16px 0 0;
+  padding: 24px 40px;
+  flex-shrink: 0;
+}
+
+.tutorModal .modal-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  border-radius: 0 0 16px 16px;
+  padding: 20px 40px;
+  flex-shrink: 0;
+}
+
+.tutorModal .modal-title {
+  font-weight: 600;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.tutorModal .close {
+  color: white;
+  opacity: 0.8;
+  text-shadow: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tutorModal .close:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.progressBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.progressStep {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 1;
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.progressStep.active .stepNumber {
+  background-color: white;
+  color: #445e8d;
+  border-color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.stepTitle {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  white-space: normal;
+  word-wrap: break-word;
+  font-size: 13px;
+  line-height: 1.3;
+  max-width: 80px;
+  transition: all 0.3s;
+}
+
+.progressStep.active .stepTitle {
+  color: white;
+  font-weight: 600;
+}
+
+.stepContent {
+  padding: 25px 20px;
+}
+
+.stepContent h4 {
+  color: #445e8d;
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-bottom: 2px solid #f8f9fa;
+  padding-bottom: 10px;
+}
+
+.stepContent h5 {
+  color: #495057;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.educationEntry,
+.certificationEntry {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-left: 4px solid #007bff;
+}
+
+.subjectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #e9ecef;
+}
+
+.checkboxLabel:hover {
+  background-color: #e3f2fd;
+  border-color: #007bff;
+}
+
+.checkboxLabel input[type="checkbox"] {
+  margin: 0;
+  transform: scale(1.1);
+}
+
+.checkboxLabel input[type="checkbox"]:checked {
+  accent-color: #007bff;
+}
+
+.availabilityGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.dayAvailability {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.dayHeader {
+  margin-bottom: 10px;
+}
+
+.dayLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.dayName {
+  font-weight: 600;
+}
+
+.dayLabel input[type="checkbox"] {
+  transform: scale(1.2);
+  accent-color: #007bff;
+}
+
+.timeSlots {
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+}
+
+.timeSlot {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #e3e6ea;
+}
+
+.timeSlot:last-child {
+  margin-bottom: 0;
+}
+
+.timeInputs {
+  display: flex;
+  align-items: end;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.timeInput {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 120px;
+}
+
+.timeInput label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #495057;
+  margin: 0;
+}
+
+.timeInput input[type="time"] {
+  padding: 6px 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.timeInput input[type="time"]:focus {
+  border-color: #007bff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.timeSeparator {
+  font-weight: 500;
+  color: #6c757d;
+  margin-bottom: 8px;
+  align-self: end;
+  padding-bottom: 6px;
+}
+
+.removeSlotBtn {
+  align-self: end;
+  margin-bottom: 1px;
+  padding: 4px 8px !important;
+  min-width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.addSlotBtn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.timeInputs span {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.timeInputs input {
+  flex: 1;
+}
+
+.modalActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.modalActions .btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Form styling improvements */
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 15px;
+}
+
+.tutorModal .row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 15px;
+  gap: 20px !important;
+}
+
+.tutorModal .row [class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  flex: 1 !important;
+  min-width: calc(50% - 10px) !important;
+}
+
+.tutorModal .form-group {
+  margin-bottom: 20px;
+}
+
+.tutorModal .form-group label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 15px;
+}
+
+.tutorModal .form-control {
+  border-radius: 8px !important;
+  border: 2px solid #ddd !important;
+  background-color: #f8f9fa !important;
+  color: #495057 !important;
+  padding: 12px 16px !important;
+  font-size: 15px !important;
+  transition: all 0.2s ease !important;
+}
+
+.tutorModal .form-control:focus {
+  border-color: #445e8d !important;
+  box-shadow: 0 0 0 3px rgba(68, 94, 141, 0.15) !important;
+  background-color: #ffffff !important;
+  outline: none !important;
+}
+
+.tutorModal .form-control:disabled {
+  background-color: #e9ecef !important;
+  opacity: 0.7;
+}
+
+.tutorModal textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.tutorModal select.form-control {
+  background-color: #ffffff !important;
+  cursor: pointer;
+  border: 2px solid #000000 !important;
+  padding: 12px 16px !important;
+  border-radius: 8px !important;
+  font-size: 15px !important;
+  color: #495057 !important;
+  transition: all 0.2s ease !important;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  padding-right: 40px !important;
+}
+
+.tutorModal select.form-control:focus {
+  background-color: #ffffff !important;
+  border-color: #445e8d !important;
+  box-shadow: 0 0 0 3px rgba(68, 94, 141, 0.15) !important;
+  outline: none !important;
+}
+
+.tutorModal input[type="text"].form-control,
+.tutorModal input[type="email"].form-control,
+.tutorModal input[type="password"].form-control,
+.tutorModal input[type="number"].form-control,
+.tutorModal input[type="tel"].form-control,
+.tutorModal input[type="date"].form-control {
+  background-color: #f8f9fa !important;
+}
+
+.tutorModal input[type="text"].form-control:focus,
+.tutorModal input[type="email"].form-control:focus,
+.tutorModal input[type="password"].form-control:focus,
+.tutorModal input[type="number"].form-control:focus,
+.tutorModal input[type="tel"].form-control:focus,
+.tutorModal input[type="date"].form-control:focus {
+  background-color: #ffffff !important;
+}
+
+.tutorModal .alert {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  padding: 10px 15px;
+  transition: all 0.2s ease;
+}
+
+.tutorModal .form-control-file {
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+/* Required field indicator */
+.tutorModal label[for] {
+  position: relative;
+}
+
+.tutorModal label:has-text('*')::after,
+.tutorModal label[title*="required"]::after {
+  content: ' *';
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Button styling */
+.tutorModal .btn {
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 12px 24px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.tutorModal .btn-secondary {
+  background-color: transparent !important;
+  border: 2px solid #6c757d !important;
+  color: #6c757d !important;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tutorModal .btn-secondary:hover {
+  background-color: #6c757d !important;
+  color: white !important;
+  border-color: #6c757d !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(108, 117, 125, 0.2);
+}
+
+.tutorModal .btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.tutorModal .btn-primary {
+  background-color: #007bff !important;
+  color: white !important;
+  border: none !important;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tutorModal .btn-primary:hover:not(:disabled) {
+  background-color: #0056b3 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
+
+.tutorModal .btn-primary:disabled {
+  background-color: #6c757d !important;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.tutorModal .btn-success {
+  background-color: #28a745 !important;
+  color: white !important;
+  border: none !important;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.tutorModal .btn-success:hover:not(:disabled) {
+  background-color: #1e7e34 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
+
+.tutorModal .btn-success:disabled {
+  background-color: #6c757d !important;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.tutorModal .btn-outline-primary {
+  border: 2px solid #445e8d;
+  color: #445e8d;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: transparent;
+}
+
+.tutorModal .btn-outline-primary:hover {
+  background-color: #445e8d;
+  color: white;
+}
+
+/* Navigation Button Styles - Matching Student Modal */
+.tutorModal .btn-outline-secondary {
+  padding: 10px 20px;
+  border: 2px solid #6c757d;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #6c757d;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tutorModal .btn-outline-secondary:hover:not(:disabled) {
+  background-color: #6c757d;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(108, 117, 125, 0.2);
+}
+
+.tutorModal .btn-outline-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.tutorModal .btn-primary {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #445e8d;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tutorModal .btn-primary:hover:not(:disabled) {
+  background-color: #3a5078;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(68, 94, 141, 0.3);
+}
+
+.tutorModal .btn-primary:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.tutorModal .btn-success {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #28a745;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.tutorModal .btn-success:hover:not(:disabled) {
+  background-color: #1e7e34;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
+
+.tutorModal .btn-success:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.tutorModal .btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.tutorModal .btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* Specific Navigation Button Classes */
+.tutorModal .prevButton {
+  padding: 10px 20px;
+  border: 2px solid #6c757d;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #6c757d;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tutorModal .prevButton:hover:not(:disabled) {
+  background-color: #6c757d;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(108, 117, 125, 0.2);
+}
+
+.tutorModal .prevButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.tutorModal .nextButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #445e8d;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tutorModal .nextButton:hover:not(:disabled) {
+  background-color: #3a5078;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(68, 94, 141, 0.3);
+}
+
+.tutorModal .nextButton:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.tutorModal .submitButton {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #28a745;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.tutorModal .submitButton:hover:not(:disabled) {
+  background-color: #1e7e34;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
+
+.tutorModal .submitButton:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .tutorModal {
+    padding: 10px;
+  }
+
+  .tutorModal .modal-dialog {
+    width: 90%;
+    max-width: none;
+    min-height: auto;
+    max-height: 90vh;
+    margin: 0 auto;
+  }
+
+  .tutorModal .modal-content {
+    max-height: 90vh;
+  }
+
+  .tutorModal .modal-body {
+    max-height: calc(90vh - 140px);
+    padding: 20px;
+  }
+
+  .tutorModal .modal-header,
+  .tutorModal .modal-footer {
+    padding: 15px 20px;
+  }
+
+  .progressBar {
+    padding: 15px 0;
+  }
+
+  .progressStep {
+    width: 35px;
+    height: 35px;
+    margin: 0 15px;
+    font-size: 14px;
+  }
+
+  .progressStep:not(:last-child)::after {
+    width: 30px;
+  }  .subjectGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+  }
+  
+  .availabilityGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .timeSlots {
+    padding: 10px;
+  }
+  
+  .timeInputs {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .timeInput {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .timeSeparator {
+    text-align: center;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .removeSlotBtn {
+    align-self: center;
+    width: 100%;
+    max-width: 100px;
+  }
+  
+  .modalActions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .modalActions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .tutorModal .modal-header {
+    padding: 15px 20px;
+  }
+  
+  .tutorModal .modal-title {
+    font-size: 1.1rem;
+  }
+  
+  .stepContent {
+    padding: 15px 0;
+  }
+  
+  .educationEntry,
+  .certificationEntry {
+    padding: 15px;
+  }
+}
+
+/* Animation */
+.tutorModal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+}
+
+.tutorModal.show .modal-dialog {
+  transform: none;
+}
+
+/* Custom scrollbar for subject grid */
+.subjectGrid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.subjectGrid::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.subjectGrid::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.subjectGrid::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}

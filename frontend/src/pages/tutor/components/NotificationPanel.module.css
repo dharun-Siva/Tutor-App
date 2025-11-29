@@ -1,0 +1,271 @@
+/* NotificationPanel.module.css */
+.notificationPanel {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.notificationHeader {
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.notificationHeader h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.notificationCount {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  margin-left: auto;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+.notificationList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.notificationItem {
+  display: flex;
+  padding: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  position: relative;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.notificationItem:hover {
+  background: #f8fafc;
+}
+
+.notificationItem:last-child {
+  border-bottom: none;
+}
+
+/* Priority Classes */
+.priorityLow {
+  border-left: 4px solid #10b981;
+}
+
+.priorityMedium {
+  border-left: 4px solid #3b82f6;
+}
+
+.priorityHigh {
+  border-left: 4px solid #f59e0b;
+}
+
+.priorityUrgent {
+  border-left: 4px solid #ef4444;
+  background: #fef2f2;
+}
+
+.priorityUrgent:hover {
+  background: #fef2f2;
+}
+
+.notificationIcon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.priorityLow .notificationIcon {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.priorityMedium .notificationIcon {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.priorityHigh .notificationIcon {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.priorityUrgent .notificationIcon {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.notificationContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.notificationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.notificationTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.notificationTime {
+  font-size: 0.75rem;
+  color: #64748b;
+  white-space: nowrap;
+  margin-left: 0.5rem;
+}
+
+.notificationMessage {
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.4;
+  margin: 0 0 0.5rem 0;
+}
+
+.notificationDetails {
+  margin: 0.5rem 0;
+}
+
+.notificationDetails p {
+  margin: 0.25rem 0;
+  font-size: 0.8rem;
+}
+
+.notificationActions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.notificationActions .btn {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+}
+
+.dismissButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.dismissButton:hover {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.notificationFooter {
+  padding: 1rem;
+  border-top: 1px solid #f1f5f9;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.emptyState {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #64748b;
+}
+
+.emptyState i {
+  opacity: 0.5;
+}
+
+/* Animation for new notifications */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.notificationItem.new {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .notificationPanel {
+    border-radius: 0;
+    max-height: 100vh;
+  }
+  
+  .notificationItem {
+    padding: 0.75rem;
+  }
+  
+  .notificationIcon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+  
+  .notificationActions {
+    flex-direction: column;
+  }
+  
+  .notificationActions .btn {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* Custom scrollbar for notification list */
+.notificationList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.notificationList::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.notificationList::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.notificationList::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

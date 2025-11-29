@@ -1,0 +1,284 @@
+/* Enhanced Card Component Styles - Flat Design */
+
+.enhancedCard {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+}
+
+.enhancedCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #007bff;
+  opacity: 0;
+}
+
+/* Variants */
+.default {
+  background: white;
+}
+
+.primary {
+  border-color: #b3d7ff;
+}
+
+.primary::before {
+  background: #007bff;
+  opacity: 1;
+}
+
+.success {
+  border-color: #c3e6cb;
+}
+
+.success::before {
+  background: #28a745;
+  opacity: 1;
+}
+
+.warning {
+  border-color: #ffeaa7;
+}
+
+.warning::before {
+  background: #ffc107;
+  opacity: 1;
+}
+
+.info {
+  border-color: #bee5eb;
+}
+
+.info::before {
+  background: #17a2b8;
+  opacity: 1;
+}
+
+.danger {
+  border-color: #f5c6cb;
+}
+
+.danger::before {
+  background: #dc3545;
+  opacity: 1;
+}
+
+/* Gradient Variant */
+.gradient {
+  background: white;
+}
+
+/* Size Variants */
+.small {
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.medium {
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.large {
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* Hover Effects - Simplified */
+.hoverable:hover::before {
+  opacity: 1;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+/* Header */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.headerContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+}
+
+.cardIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  background: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.headerText {
+  flex: 1;
+  min-width: 0; /* For text truncation */
+}
+
+.cardTitle {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.2;
+}
+
+.cardSubtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #718096;
+  line-height: 1.4;
+}
+
+.cardActions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Content */
+.cardContent {
+  position: relative;
+}
+
+/* Loading State */
+.loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border-radius: inherit;
+}
+
+.loadingSpinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e2e8f0;
+  border-top: 3px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cardHeader {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .headerContent {
+    align-items: center;
+  }
+  
+  .cardActions {
+    align-self: stretch;
+    justify-content: center;
+  }
+  
+  .small {
+    padding: 0.75rem;
+  }
+  
+  .medium {
+    padding: 1rem;
+  }
+  
+  .large {
+    padding: 1.5rem;
+  }
+}
+
+/* Animation Classes */
+.fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.slideUp {
+  animation: slideUp 0.5s ease-out;
+}
+
+.scaleIn {
+  animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes scaleIn {
+  from { 
+    opacity: 0; 
+    transform: scale(0.9); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+/* Special Effects */
+.enhancedCard:hover .cardIcon {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.enhancedCard:hover .cardTitle {
+  color: #667eea;
+}
+
+/* Focus States for Accessibility */
+.clickable:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+.clickable:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}

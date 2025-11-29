@@ -1,0 +1,163 @@
+/* Progress Chart Component Styles */
+
+.progressChart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Circular Progress */
+.circularProgress {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressSvg {
+  transform: rotate(-90deg);
+  overflow: visible;
+}
+
+.progressBackground {
+  fill: none;
+  stroke: #e2e8f0;
+  stroke-linecap: round;
+}
+
+.progressFill {
+  fill: none;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.8s ease-in-out;
+}
+
+.progressLabel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.progressValue {
+  font-weight: 700;
+  color: #2d3748;
+  line-height: 1;
+}
+
+.progressTitle {
+  font-size: 0.7rem;
+  color: #718096;
+  margin-top: 0.125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Size Variants */
+.small .progressValue {
+  font-size: 0.9rem;
+}
+
+.small .progressTitle {
+  font-size: 0.6rem;
+}
+
+.medium .progressValue {
+  font-size: 1.1rem;
+}
+
+.medium .progressTitle {
+  font-size: 0.7rem;
+}
+
+.large .progressValue {
+  font-size: 1.4rem;
+}
+
+.large .progressTitle {
+  font-size: 0.8rem;
+}
+
+/* Linear Progress */
+.linear {
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.linear .progressTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.progressBarContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.progressBar {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.8s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.progressBarFill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.progressPercentage {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #667eea;
+  min-width: 3rem;
+  text-align: right;
+}
+
+/* Hover Effects */
+.progressChart:hover .progressFill {
+  filter: brightness(1.1);
+}
+
+.progressChart:hover .progressValue {
+  color: #667eea;
+}
+
+/* Animation */
+@keyframes progressLoad {
+  0% {
+    stroke-dashoffset: 251.2; /* Full circumference for medium size */
+  }
+}
+
+.progressFill {
+  animation: progressLoad 1.5s ease-out;
+}

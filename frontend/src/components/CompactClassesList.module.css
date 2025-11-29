@@ -1,0 +1,532 @@
+/* Compact Classes List Styles */
+.compactClassesContainer {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #f8f9fa;
+  border-radius: 8px 8px 0 0;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.2s;
+}
+
+.sectionTitle:hover {
+  color: #007bff;
+}
+
+.countBadge {
+  background: #007bff;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Search Box */
+.searchBox {
+  position: relative;
+  min-width: 200px;
+}
+
+.searchBox i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 14px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px 12px 8px 32px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background: white;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Filter and Sort Selects */
+.filterSelect,
+.sortSelect {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+}
+
+.filterSelect:focus,
+.sortSelect:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* View Toggle */
+.viewToggle {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.viewBtn {
+  padding: 8px 12px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.viewBtn:hover {
+  background: #f8f9fa;
+}
+
+.viewBtn.active {
+  background: #007bff;
+  color: white;
+}
+
+/* Refresh Button */
+.refreshBtn {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.refreshBtn:hover {
+  background: #f8f9fa;
+  border-color: #007bff;
+}
+
+/* Content Area */
+.content {
+  padding: 20px;
+}
+
+.loading,
+.error,
+.empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.error {
+  color: #dc3545;
+}
+
+.error i {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.retryBtn {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: 1px solid #dc3545;
+  border-radius: 4px;
+  background: white;
+  color: #dc3545;
+  cursor: pointer;
+}
+
+.retryBtn:hover {
+  background: #dc3545;
+  color: white;
+}
+
+/* Grid View - 6 Columns */
+.compactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+@media (min-width: 1400px) {
+  .compactGrid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .compactGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .compactGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .compactGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .compactGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Compact Card */
+.compactCard {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  background: white;
+  transition: all 0.2s;
+  min-height: 120px;
+  position: relative;
+}
+
+.compactCard:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.cardHeader {
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.statusDot.canJoin {
+  background: #28a745;
+}
+
+.statusDot.inProgress {
+  background: #17a2b8;
+  animation: pulse 2s infinite;
+}
+
+.statusDot.tooEarly {
+  background: #ffc107;
+}
+
+.statusDot.ended {
+  background: #6c757d;
+}
+
+.statusDot.notToday {
+  background: #e9ecef;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.cardContent {
+  padding: 12px;
+}
+
+.cardInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #666;
+}
+
+.studentCount,
+.classTime,
+.classDuration {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cardActions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.joinBtn,
+.detailsBtn,
+.actionBtn {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+  flex: 1;
+  max-width: 40px;
+}
+
+.joinBtn.primary {
+  background: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.joinBtn.primary:hover {
+  background: #218838;
+}
+
+.joinBtn.disabled {
+  background: #f8f9fa;
+  border-color: #dee2e6;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.detailsBtn:hover,
+.actionBtn.details:hover {
+  background: #f8f9fa;
+  border-color: #007bff;
+}
+
+/* Table View */
+.tableContainer {
+  overflow-x: auto;
+}
+
+.compactTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.compactTable th {
+  background: #f8f9fa;
+  padding: 12px 8px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #dee2e6;
+  white-space: nowrap;
+}
+
+.compactTable td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
+.compactTable tr:hover {
+  background: #f8f9fa;
+}
+
+.classCell {
+  min-width: 150px;
+}
+
+.className {
+  font-weight: 600;
+  color: #333;
+  display: block;
+}
+
+.classSubject {
+  color: #666;
+  font-size: 12px;
+}
+
+.statusBadge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statusBadge.canJoin {
+  background: #d4edda;
+  color: #155724;
+}
+
+.statusBadge.inProgress {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.statusBadge.tooEarly {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.statusBadge.ended {
+  background: #d6d8db;
+  color: #383d41;
+}
+
+.statusBadge.notToday {
+  background: #f8f9fa;
+  color: #6c757d;
+}
+
+.statusBadge.cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.statusBadge.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.actionsCell {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.actionBtn {
+  margin: 0 2px;
+  padding: 6px 8px;
+  min-width: 32px;
+}
+
+.actionBtn.join {
+  background: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.actionBtn.join:hover {
+  background: #218838;
+}
+
+.actionBtn.disabled {
+  background: #f8f9fa;
+  border-color: #dee2e6;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.actionBtn.details:hover {
+  background: #f8f9fa;
+  border-color: #007bff;
+  color: #007bff;
+}
+
+/* Status-based styling for cards and rows */
+.canJoin {
+  border-left: 4px solid #28a745;
+}
+
+.inProgress {
+  border-left: 4px solid #17a2b8;
+}
+
+.tooEarly {
+  border-left: 4px solid #ffc107;
+}
+
+.ended {
+  border-left: 4px solid #6c757d;
+  opacity: 0.8;
+}
+
+.notToday {
+  border-left: 4px solid #e9ecef;
+  opacity: 0.7;
+}
+
+/* Responsive Controls */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  
+  .searchBox {
+    min-width: auto;
+  }
+  
+  .viewToggle {
+    align-self: center;
+  }
+}
+
+/* Compact mobile view */
+@media (max-width: 480px) {
+  .sectionHeader {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .sectionTitle {
+    justify-content: center;
+  }
+  
+  .content {
+    padding: 12px;
+  }
+  
+  .compactTable {
+    font-size: 12px;
+  }
+  
+  .compactTable th,
+  .compactTable td {
+    padding: 8px 4px;
+  }
+}

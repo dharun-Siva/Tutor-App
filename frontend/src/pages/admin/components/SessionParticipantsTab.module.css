@@ -1,0 +1,83 @@
+.tabContainer {
+  padding: 1.5rem;
+}
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.tabNavigation {
+  display: flex;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+.tabButton {
+  background: none;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: #6c757d;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+.tabButton:hover {
+  color: #007bff;
+}
+.activeTab {
+  color: #007bff;
+  border-bottom-color: #007bff;
+}
+.refreshBtn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.refreshBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.error {
+  color: #b00020;
+  margin-bottom: 1rem;
+}
+.tableContainer {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 1rem;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.97rem;
+}
+.table th, .table td {
+  padding: 0.5rem 0.7rem;
+  border-bottom: 1px solid #e9ecef;
+  text-align: left;
+}
+.table th {
+  background: #f8f9fa;
+  font-weight: 600;
+}
+.deleteBtn {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.noData {
+  text-align: center;
+  color: #888;
+  padding: 1.5rem 0;
+}

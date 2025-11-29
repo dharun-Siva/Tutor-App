@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "set you password here",
+    "database": "Tutor Application",
+    "host": "localhost",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "set you password here",
+    "database": "Tutor Application",
+    "host": "localhost",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "set you password here",
+    "database": "Tutor Application",
+    "host": "localhost",
+    "port": 5432,
+    "dialect": "postgres"
+  }
+}

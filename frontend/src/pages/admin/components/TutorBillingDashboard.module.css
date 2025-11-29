@@ -1,0 +1,220 @@
+.badge-void {
+	background: #b0b0b0;
+	color: #222;
+}
+/* Top card for dashboard title and actions */
+.topCard {
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+	padding: 28px 32px 18px 32px;
+	margin-bottom: 28px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.topTitle {
+	color: #22313f;
+	font-size: 2rem;
+	font-weight: 700;
+}
+.topActions {
+	display: flex;
+	gap: 16px;
+}
+.topBtn {
+	padding: 10px 22px;
+	border: none;
+	border-radius: 8px;
+	font-size: 1.05em;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+.topBtnFilter {
+	background: #3498db;
+	color: #fff;
+}
+.topBtnFilter:hover {
+	background: #217dbb;
+}
+.topBtnExport {
+	background: #27ae60;
+	color: #fff;
+}
+.topBtnExport:hover {
+	background: #219150;
+}
+
+/* Filter Panel Styles */
+.filterPanel {
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+	margin-bottom: 24px;
+	padding: 28px 32px 18px 32px;
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	animation: slideDown 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes slideDown {
+	from { opacity: 0; transform: translateY(-16px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+.filterRow {
+	display: flex;
+	gap: 32px;
+	align-items: flex-end;
+}
+.filterGroup {
+	display: flex;
+	flex-direction: column;
+	min-width: 180px;
+}
+.filterLabel {
+	color: #22313f;
+	font-size: 1.04em;
+	font-weight: 600;
+	margin-bottom: 6px;
+}
+.filterSelect {
+	padding: 8px 12px;
+	border: 1.5px solid #d1d5db;
+	border-radius: 6px;
+	font-size: 1em;
+	background: #fff;
+	color: #22313f;
+	transition: border 0.2s;
+}
+.filterSelect:focus {
+	outline: none;
+	border-color: #3498db;
+}
+.filterActions {
+	display: flex;
+	gap: 14px;
+	margin-top: 10px;
+}
+.filterBtn {
+	padding: 8px 22px;
+	border: none;
+	border-radius: 8px;
+	font-size: 1em;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+.filterBtnApply {
+	background: #3498db;
+	color: #fff;
+}
+.filterBtnApply:hover {
+	background: #217dbb;
+}
+.filterBtnClear {
+	background: #e0e0e0;
+	color: #22313f;
+}
+.filterBtnClear:hover {
+	background: #b0b0b0;
+}
+.summaryContainer {
+	display: flex;
+	gap: 24px;
+	margin: 24px 0 0 0;
+}
+.summaryCard {
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+	padding: 18px 32px 14px 32px;
+	min-width: 170px;
+	text-align: center;
+}
+.summaryLabel {
+	color: #6c7a89;
+	font-size: 1.02em;
+	margin-bottom: 6px;
+	letter-spacing: 0.04em;
+}
+.summaryValue {
+	color: #22313f;
+	font-size: 2em;
+	font-weight: 700;
+	margin-top: 2px;
+}
+/* Basic styles for TutorBillingDashboard */
+
+.tableContainer {
+	margin-top: 24px;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+	padding: 0 0 16px 0;
+}
+.table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	border-radius: 12px;
+	overflow: hidden;
+}
+.table th {
+	background: #2c3e50;
+	color: #fff;
+	font-weight: 600;
+	font-size: 1rem;
+	padding: 12px 8px;
+	border-bottom: 2px solid #e0e0e0;
+	text-align: left;
+}
+.table td {
+	background: #fff;
+	color: #222;
+	font-size: 0.98rem;
+	padding: 10px 8px;
+	border-bottom: 1px solid #e0e0e0;
+}
+.table tr:last-child td {
+	border-bottom: none;
+}
+.badge {
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 12px;
+	font-size: 0.95em;
+	font-weight: 500;
+	color: #fff;
+}
+.badge-unpaid { background: #ff6b6b; }
+.badge-paid { background: #4cd964; }
+.badge-canceled { background: #b0b0b0; color: #222; }
+.badge-demo { background: #ffa500; }
+.badge-void { background: #b0b0b0; color: #222; }
+.btn {
+	padding: 4px 16px;
+	border: none;
+	border-radius: 6px;
+	font-size: 0.97em;
+	font-weight: 500;
+	cursor: pointer;
+	margin-right: 6px;
+	transition: background 0.2s;
+}
+.btn-mark {
+	background: #4cd964;
+	color: #fff;
+}
+.btn-mark:hover {
+	background: #43c85a;
+}
+.btn-void {
+	background: #ff6b6b;
+	color: #fff;
+}
+.btn-void:hover {
+	background: #e55a5a;
+}
+.loading { margin: 32px 0; text-align: center; }
+.error { color: red; margin: 16px 0; text-align: center; }

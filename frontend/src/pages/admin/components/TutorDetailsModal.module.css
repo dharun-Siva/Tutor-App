@@ -1,0 +1,530 @@
+.detailsModal {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 9999 !important;
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.detailsModal .modalDialog {
+  width: 70% !important;
+  max-width: 1200px !important;
+  min-height: 600px !important;
+  max-height: 85vh !important;
+  position: relative !important;
+  z-index: 10000 !important;
+  animation: slideUp 0.3s ease-out;
+  margin: 0 auto !important;
+  visibility: visible !important;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.detailsModal .modalContent {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  display: flex !important;
+  flex-direction: column;
+  background-color: #ffffff;
+  overflow: hidden;
+  height: 100%;
+  max-height: 85vh;
+  position: relative;
+  visibility: visible !important;
+}
+
+.detailsModal .modalHeader {
+  background: linear-gradient(135deg, #17a2b8, #138496);
+  color: white;
+  border-radius: 12px 12px 0 0;
+  padding: 20px 30px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detailsModal .modalTitle {
+  font-weight: 600;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.detailsModal .closeButton {
+  color: white;
+  opacity: 0.8;
+  text-shadow: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detailsModal .closeButton:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.detailsModal .modalBody {
+  overflow-y: auto;
+  flex: 1;
+  background-color: #ffffff;
+  padding: 25px 30px;
+  max-height: calc(85vh - 160px);
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #f1f1f1;
+  visibility: visible !important;
+}
+
+.detailsModal .modalBody::-webkit-scrollbar {
+  width: 8px;
+}
+
+.detailsModal .modalBody::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.detailsModal .modalBody::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.detailsModal .modalBody::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+.detailsModal .modalFooter {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  border-radius: 0 0 12px 12px;
+  padding: 20px 30px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.detailsModal .modalActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tutorHeader {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border-left: 4px solid #17a2b8;
+}
+
+.tutorBasicInfo h3 {
+  color: #495057;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.tutorBasicInfo p {
+  margin-bottom: 5px;
+  color: #6c757d;
+}
+
+.tutorBasicInfo .badge {
+  font-size: 0.9em;
+  padding: 6px 12px;
+  margin-top: 10px;
+}
+
+.section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section h5 {
+  color: #495057;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.infoItem strong {
+  color: #495057;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.infoItem span {
+  color: #6c757d;
+  font-size: 0.95em;
+}
+
+.addressSection {
+  margin-top: 15px;
+}
+
+.addressSection strong {
+  color: #495057;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.addressSection p {
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.subjectsList,
+.languagesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.subjectsList .badge,
+.languagesList .badge {
+  font-size: 0.85em;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.bioText {
+  color: #495057;
+  line-height: 1.6;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin: 0;
+  border-left: 4px solid #17a2b8;
+}
+
+.educationItem {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-left: 4px solid #28a745;
+}
+
+.educationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.educationHeader strong {
+  color: #495057;
+  font-size: 1.1em;
+}
+
+.year {
+  background-color: #28a745;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.educationDetails p {
+  margin: 5px 0;
+  color: #6c757d;
+}
+
+.certificationItem {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-left: 4px solid #ffc107;
+}
+
+.certificationHeader {
+  margin-bottom: 10px;
+}
+
+.certificationHeader strong {
+  color: #495057;
+  font-size: 1.1em;
+}
+
+.certificationDetails p {
+  margin: 5px 0;
+  color: #6c757d;
+  font-size: 0.9em;
+}
+
+.availabilityGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.daySchedule {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e9ecef;
+}
+
+.daySchedule strong {
+  color: #495057;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9em;
+}
+
+.daySchedule .timeSlots {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 5px;
+}
+
+.daySchedule .timeSlot {
+  background-color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  border: 1px solid #dee2e6;
+  color: #28a745;
+  font-weight: 500;
+}
+
+.classesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.classItem {
+  background-color: #e3f2fd;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #2196f3;
+}
+
+.classItem strong {
+  color: #1976d2;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.classItem p {
+  margin: 3px 0;
+  color: #424242;
+  font-size: 0.9em;
+}
+
+.statusActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.statusActions .btn {
+  padding: 8px 16px;
+  font-size: 0.9em;
+  border-radius: 6px;
+}
+
+/* Badge styles */
+.badge-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.badge-warning {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.badge-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.badge-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.badge-info {
+  background-color: #17a2b8;
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .detailsModal .modal-dialog {
+    max-width: 95%;
+    margin: 10px auto;
+  }
+  
+  .tutorHeader {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .infoGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .educationHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .availabilityGrid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+  
+  .classesList {
+    grid-template-columns: 1fr;
+  }
+  
+  .statusActions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .statusActions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .detailsModal .modal-header {
+    padding: 15px 20px;
+  }
+  
+  .detailsModal .modal-title {
+    font-size: 1.1rem;
+  }
+  
+  .section {
+    margin-bottom: 25px;
+  }
+  
+  .tutorHeader {
+    padding: 15px;
+  }
+  
+  .educationItem,
+  .certificationItem {
+    padding: 15px;
+  }
+  
+  .daySchedule {
+    padding: 12px;
+  }
+  
+  .daySchedule .timeSlot {
+    padding: 4px 8px;
+    font-size: 0.8em;
+  }
+  
+  .subjectsList,
+  .languagesList {
+    gap: 5px;
+  }
+  
+  .subjectsList .badge,
+  .languagesList .badge {
+    font-size: 0.8em;
+    padding: 4px 8px;
+  }
+}
+
+/* Animation */
+.detailsModal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+}
+
+.detailsModal.show .modal-dialog {
+  transform: none;
+}
+
+/* Hover effects */
+.section:hover {
+  background-color: rgba(248, 249, 250, 0.3);
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.educationItem:hover,
+.certificationItem:hover,
+.classItem:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.daySchedule:hover {
+  border-color: #17a2b8;
+  transition: border-color 0.2s ease;
+}

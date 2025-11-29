@@ -1,0 +1,374 @@
+.sessionsTab {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.stats {
+  display: flex;
+  gap: 16px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  min-width: 80px;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-bottom: 4px;
+}
+
+.statValue {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.filters {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.filterRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.filterSelect, .filterInput {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  min-width: 150px;
+}
+
+.filterSelect:focus, .filterInput:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.filterActions {
+  display: flex;
+  gap: 8px;
+}
+
+.searchButton, .clearButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.searchButton {
+  background: #007bff;
+  color: white;
+}
+
+.searchButton:hover {
+  background: #0056b3;
+}
+
+.clearButton {
+  background: #6c757d;
+  color: white;
+}
+
+.clearButton:hover {
+  background: #545b62;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.error {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #f5c6cb;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+}
+
+.sessionsTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.sessionsTable th,
+.sessionsTable td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
+.sessionsTable th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sessionsTable tr:hover {
+  background: #f8f9fa;
+}
+
+.sessionId {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.classInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.className {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.classSubject {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.userName {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.userEmail {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.studentList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.studentItem {
+  font-size: 0.9rem;
+  color: #2c3e50;
+  padding: 2px 0;
+}
+
+.dateTime {
+  font-size: 0.9rem;
+  color: #2c3e50;
+}
+
+.duration {
+  background: #e9ecef;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: #495057;
+  font-weight: 500;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  min-width: 80px;
+}
+
+.statusScheduled {
+  background: #cce5ff;
+  color: #0066cc;
+}
+
+.statusInProgress {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.statusCompleted {
+  background: #d4edda;
+  color: #155724;
+}
+
+.statusCancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.statusNoShow {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+.meetingLink {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.meetingLink:hover {
+  text-decoration: underline;
+}
+
+.noLink {
+  color: #6c757d;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.participants {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actionButton {
+  padding: 6px 12px;
+  border: 1px solid #007bff;
+  background: white;
+  color: #007bff;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.actionButton:hover {
+  background: #007bff;
+  color: white;
+}
+
+.noData {
+  text-align: center;
+  padding: 40px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  padding: 16px;
+}
+
+.paginationButton {
+  padding: 8px 16px;
+  border: 1px solid #007bff;
+  background: white;
+  color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.paginationButton:hover:not(:disabled) {
+  background: #007bff;
+  color: white;
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #dee2e6;
+  color: #6c757d;
+}
+
+.paginationInfo {
+  color: #6c757d;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .filterRow {
+    flex-direction: column;
+  }
+  
+  .filterSelect, .filterInput {
+    min-width: unset;
+    width: 100%;
+  }
+  
+  .tableContainer {
+    font-size: 0.8rem;
+  }
+  
+  .sessionsTable th,
+  .sessionsTable td {
+    padding: 8px 4px;
+  }
+  
+  .stats {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}

@@ -1,0 +1,340 @@
+.meetingControls {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.classInfo {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.classInfo h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.classInfo p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.timeStatus {
+  margin: 10px 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeStatus i {
+  font-size: 1.1em;
+}
+
+.timeStatus.not-ready {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  border: 1px solid #dee2e6;
+}
+
+.timeStatus.ready {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.timeStatus.live {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  animation: pulse 2s infinite;
+}
+
+.timeStatus.ending {
+  background-color: #ffeaa7;
+  color: #b7791f;
+  border: 1px solid #f1c40f;
+}
+
+.timeStatus.ended {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.tutorInfo, .studentInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.tutorInfo {
+  background-color: #e7f3ff;
+  color: #004085;
+  border: 1px solid #b8daff;
+}
+
+.studentInfo {
+  background-color: #f0f8e7;
+  color: #2d5a00;
+  border: 1px solid #c3e6cb;
+}
+
+.timeInfo {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  color: #6c757d;
+  border: 1px solid #dee2e6;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  border: 1px solid #f5c6cb;
+}
+
+.noClass {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  padding: 20px;
+}
+
+.createSession {
+  text-align: center;
+}
+
+.createButton {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s;
+}
+
+.createButton:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.createButton:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.sessionControls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sessionInfo h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.sessionInfo p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.status {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.status.scheduled {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.in-progress {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.completed {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.meetingActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.joinButton, .rejoinButton {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s;
+}
+
+.joinButton:hover:not(:disabled), .rejoinButton:hover:not(:disabled) {
+  background-color: #1e7e34;
+}
+
+.leaveButton {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s;
+}
+
+.leaveButton:hover:not(:disabled) {
+  background-color: #c82333;
+}
+
+.completeButton {
+  background-color: #6f42c1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s;
+}
+
+.completeButton:hover:not(:disabled) {
+  background-color: #5a32a3;
+}
+
+.inSessionControls {
+  display: flex;
+  gap: 10px;
+}
+
+.meetingLink {
+  background-color: #17a2b8;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9em;
+  transition: background-color 0.2s;
+}
+
+.meetingLink:hover {
+  background-color: #138496;
+  text-decoration: none;
+  color: white;
+}
+
+.sessionRatings {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+}
+
+.sessionRatings h5 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.ratingGroup {
+  margin-bottom: 15px;
+}
+
+.ratingGroup label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #495057;
+}
+
+.ratingGroup select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.ratingGroup textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.9em;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.completedSession {
+  background-color: #e7f3ff;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #b8daff;
+}
+
+.completedSession h5 {
+  margin: 0 0 10px 0;
+  color: #004085;
+}
+
+.completedSession p {
+  margin: 5px 0;
+  color: #004085;
+}
+
+button:disabled {
+  background-color: #6c757d !important;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .meetingActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .inSessionControls {
+    flex-direction: column;
+  }
+  
+  .joinButton, .rejoinButton, .leaveButton, .completeButton {
+    width: 100%;
+    text-align: center;
+  }
+}

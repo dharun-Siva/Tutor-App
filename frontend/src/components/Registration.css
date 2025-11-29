@@ -1,0 +1,1182 @@
+/* Registration Page Styles - Consistent with Login */
+.registration-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  padding: 2rem 1rem;
+}
+
+.registration-container {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem; /* tightened padding to make the box visually smaller */
+  width: 100%;
+  max-width: 620px; /* reduced overall box width */
+  border: 1px solid #e9ecef;
+  position: relative;
+  z-index: 10;
+}
+
+/* Header Section */
+.registration-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.logo i {
+  font-size: 2.5rem;
+  color: #445e8d;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.tagline {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Center Logo Display */
+.center-logo-display {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+
+.center-logo-image {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Form Styles */
+.registration-form {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem; /* reduce spacing between header and form for compact layout */
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group.half {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #000 !important;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-group label i {
+  color: #445e8d;
+  width: 16px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #635c5c !important;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: #ffffff !important;
+  color: #333 !important;
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder {
+  color: #6c757d;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input.error,
+.form-group select.error {
+  border-color: #dc3545 !important;
+}
+
+.form-group input:disabled,
+.form-group select:disabled {
+  background-color: #f8f9fa !important;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Password Input */
+.password-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input input {
+  padding-right: 3rem;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+  color: #445e8d;
+}
+
+.password-toggle:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Messages */
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  border: 1px solid #f5c2c7;
+}
+
+.success-message {
+  background: #d1e7dd;
+  color: #0a3622;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  border: 1px solid #a3cfbb;
+}
+
+.error-message i,
+.success-message i {
+  font-size: 1rem;
+}
+
+/* Registration Button */
+.registration-button {
+  width: 100%;
+  padding: 1rem;
+  background: #445e8d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.registration-button:hover:not(:disabled) {
+  background: #3a5080;
+  transform: translateY(-1px);
+}
+
+.registration-button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.registration-button i {
+  font-size: 1rem;
+}
+
+/* Form Footer */
+.form-footer {
+  text-align: center;
+}
+
+.form-footer p {
+  color: #666;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.login-link {
+  color: #445e8d;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.login-link:hover {
+  color: #3a5080;
+  text-decoration: underline;
+}
+
+/* Background Elements */
+.bg-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(68, 94, 141, 0.1), rgba(68, 94, 141, 0.05));
+  animation: float 6s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.circle-3 {
+  width: 100px;
+  height: 100px;
+  top: 30%;
+  right: 30%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+/* Step 2 & 3 Specific Styles */
+.form-section {
+  margin-bottom: 1.75rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem; /* reduced padding to keep inner content compact */
+  background: #f8f9fa;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.section-header i {
+  color: #445e8d;
+  font-size: 1.25rem;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.form-group.quarter {
+  flex: 0 0 22%;
+  margin-right: 2.5%;
+  margin-bottom: 1.5rem;
+}
+
+.form-group.third {
+  flex: 0 0 30%;
+  margin-right: 2.5%;
+  margin-bottom: 1.5rem;
+}
+
+.form-group.quarter:last-child,
+.form-group.third:last-child {
+  margin-right: 0;
+}
+
+.disabled-field {
+  background-color: #f8f9fa !important;
+  color: #6c757d !important;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Subjects Grid */
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  max-width: 100%;
+}
+
+/* Selected subjects list (show badges one-by-one) */
+.selected-subjects-list {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.subject-badge {
+  display: inline-block;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: #f1f5fb;
+  color: #333;
+  font-size: 0.9rem;
+  border: 1px solid #e6eef8;
+  font-weight: 600;
+}
+
+.subject-badge.pending {
+  background: #fff;
+  color: #445e8d;
+  border-color: #dee2e6;
+}
+
+.subject-badge.scheduled {
+  background: #e6f4ea;
+  color: #1e6f3f;
+  border-color: rgba(40,167,69,0.15);
+}
+
+/* Show subjects one-by-one as rows inside student cards */
+.subject-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem;
+  border: 1px solid #e6eef8;
+  border-radius: 8px;
+  background: #f9fbff;
+}
+
+.subject-row .subject-name {
+  font-weight: 700;
+  color: #333;
+}
+
+.subject-row .subject-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Right-side calendar panel */
+.calendar-panel {
+  /* kept for backward compatibility; not used when inline calendar is rendered */
+  display: none;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.calendar-title {
+  font-weight: 700;
+  color: #333;
+}
+
+.calendar-nav {
+  background: none;
+  border: 1px solid #e6eef8;
+  color: #445e8d;
+  padding: 0.15rem 0.35rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.15rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #6c757d;
+  margin-bottom: 0.15rem;
+}
+
+.calendar-weekday { padding: 0.25rem 0; }
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+}
+
+.calendar-cell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px; /* slightly smaller cells */
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #eef3fb;
+  color: #445e8d;
+  cursor: pointer;
+  font-size: 0.82rem;
+  padding: 0;
+}
+
+.calendar-cell:hover:not(.disabled) { background: #eef4ff; transform: translateY(-1px); }
+.calendar-cell.disabled { opacity: 0.5; cursor: not-allowed; }
+.calendar-cell.selected { background: #445e8d; color: #fff; border-color: #445e8d; }
+
+.calendar-footer { margin-top: 0.5rem; color: #6c757d; font-size: 0.85rem; }
+
+/* Inline calendar layout (shown below the subject row) */
+.inline-calendar-wrapper { margin-top: 0.5rem; }
+.inline-calendar {
+  width: 100%;
+  max-width: 260px; /* keep calendar compact and avoid growth when slots appear */
+  box-sizing: border-box;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  padding: 0.35rem;
+  overflow: hidden; /* ensure inner content can't push outer width */
+}
+
+/* Add breathing room between the calendar grid/footer and the slots list */
+.inline-calendar .calendar-footer {
+  margin-bottom: 1rem;
+}
+
+.schedule-subject-inline-confirm {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Make time slots inside the inline calendar compact and avoid expanding the calendar width */
+.inline-calendar .time-slots-grid {
+  display: flex;
+  flex-direction: column; /* stack slots vertically so they don't force extra width */
+  gap: 0.35rem;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+/* extra top spacing for slots when rendered below the calendar */
+.inline-calendar .time-slots-grid {
+  margin-top: 0.4rem;
+}
+
+.inline-calendar .time-slot-button {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.82rem;
+  white-space: nowrap; /* keep labels on a single line */
+  overflow: hidden;
+  text-overflow: ellipsis; /* truncate long labels instead of growing container */
+  text-align: left;
+}
+
+/* Ensure quick-slots row variant elsewhere still wraps safely if used outside inline calendar */
+.time-slots-grid.quick-slots {
+  gap: 0.35rem;
+}
+
+/* Keep existing calendar internal styles (header/grid/cells) reusable */
+@media (max-width: 900px) {
+  .inline-calendar { width: 100%; }
+}
+
+.subject-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.subject-checkbox:hover {
+  border-color: #445e8d;
+  background: #f8f9fa;
+}
+
+.subject-checkbox input[type="checkbox"] {
+  margin: 0;
+  width: auto;
+  padding: 0;
+  border: none;
+}
+
+.subject-checkbox label {
+  margin: 0;
+  font-weight: 400;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Add Student Button */
+.add-student-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #28a745; /* green */
+  color: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  transition: all 0.12s ease;
+  box-shadow: 0 6px 12px rgba(40,167,69,0.08);
+}
+
+.add-student-button:hover:not(:disabled) {
+  background: #218838; /* darker green */
+  transform: translateY(-1px);
+}
+
+.add-student-button:disabled {
+  background: #9aa6b8;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Remove Student Button (shown in student section header) */
+.remove-student-button {
+  background: #ffffff;
+  color: #6c757d;
+  border: 1px solid #dee2e6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.remove-student-button:hover:not(:disabled) {
+  background: #fff5f5;
+  color: #dc3545;
+  border-color: #f5c2c7;
+}
+
+.remove-student-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Step Indicator */
+.step-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.step-indicator span {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 2px solid #dee2e6;
+  background: white;
+  color: #6c757d;
+}
+
+.step-indicator span.active {
+  background: #445e8d;
+  color: white;
+  border-color: #445e8d;
+}
+
+.step-indicator span.completed {
+  background: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.step-line {
+  width: 3rem;
+  height: 2px;
+  background: #dee2e6;
+}
+
+/* Step 3: Tutor Selection Styles */
+.loading-container {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.loading-container i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #445e8d;
+}
+
+.tutors-grid {
+  display: grid;
+  /* Use a slightly smaller min width so more cards fit neatly, and allow auto-fill for denser packing */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tutor-card {
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1rem; /* slightly tighter */
+  cursor: pointer;
+  transition: all 0.18s ease;
+  background: white;
+  position: relative;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  min-height: 120px; /* keep cards uniform */
+  max-height: 180px; /* prevent overly tall cards */
+  overflow: hidden;
+}
+
+.tutor-card:hover {
+  border-color: #445e8d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(68, 94, 141, 0.15);
+}
+
+.tutor-card.selected {
+  border-color: #445e8d;
+  background: #f8f9fa;
+  box-shadow: 0 4px 12px rgba(68, 94, 141, 0.2);
+}
+
+.tutor-avatar {
+  text-align: center;
+  margin: 0.25rem 0 0 0;
+}
+
+.tutor-avatar i {
+  font-size: 2rem;
+  color: #445e8d;
+  background: #f8f9fa;
+  padding: 0.6rem;
+  border-radius: 50%;
+  border: 2px solid #dee2e6;
+}
+
+.tutor-info h4 {
+  margin: 0 0 0.25rem 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.tutor-email {
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tutor-subjects,
+.tutor-rate {
+  margin-bottom: 0.25rem;
+}
+
+.tutor-subjects small,
+.tutor-rate small {
+  color: #666;
+  font-size: 0.78rem;
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.selection-indicator {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #28a745;
+  font-size: 1rem;
+}
+
+/* Availability Styles */
+.availability-info {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #e9ecef;
+  border-radius: 6px;
+}
+
+.availability-info h4 {
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+.availability-grid {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.day-availability {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 4px;
+}
+
+.day-availability strong {
+  flex: 0 0 100px;
+  color: #445e8d;
+}
+
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.time-slot {
+  background: #445e8d;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.available-all-day {
+  color: #28a745;
+  font-weight: 500;
+}
+
+/* Class Summary */
+.class-summary {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #e7f3ff;
+  border-radius: 6px;
+  border-left: 4px solid #445e8d;
+}
+
+.class-summary h4 {
+  margin: 0 0 1rem 0;
+  color: #445e8d;
+}
+
+.class-summary p {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+/* Scheduled classes list (shown after scheduling) */
+.scheduled-classes-section {
+  margin-top: 1rem;
+  border: 1px solid #e9ecef;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.scheduled-classes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.scheduled-class-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  background: #f8f9fa;
+}
+
+.scheduled-class-main strong {
+  display: block;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.scheduled-class-main .muted {
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.scheduled-class-actions {
+  flex: 0 0 auto;
+}
+
+.remove-scheduled-button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #dc3545;
+  background: #ffffff;
+  color: #dc3545;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.remove-scheduled-button:hover:not(:disabled) {
+  background: #f8d7da;
+}
+
+.remove-scheduled-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Change tutor button */
+.change-tutor-button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: none;
+  background: #dc3545; /* red */
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 6px 12px rgba(220,53,69,0.08);
+  transition: all 0.12s ease;
+}
+
+.change-tutor-button:hover:not(:disabled) {
+  background: #c82333; /* darker red */
+  transform: translateY(-1px);
+}
+
+.change-tutor-button:disabled {
+  background: #e9aeb3;
+  color: #ffffff;
+  opacity: 0.85;
+  cursor: not-allowed;
+}
+
+/* Change slot button (clears selected time/tutor) */
+.change-slot-button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid rgba(68,94,141,0.12);
+  background: #ffffff; /* light */
+  color: #445e8d; /* primary brand color */
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 6px 12px rgba(68,94,141,0.04);
+  transition: all 0.12s ease;
+}
+
+.change-slot-button:hover:not(:disabled) {
+  background: #eef4ff; /* subtle blue tint on hover */
+  transform: translateY(-1px);
+}
+
+.change-slot-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Discrete time slot buttons for selected tutor */
+.time-slots-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.time-slot-button {
+  padding: 0.5rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  background: #ffffff;
+  color: #445e8d;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.time-slot-button:hover:not(:disabled) {
+  background: #f1f5fb;
+  transform: translateY(-1px);
+}
+
+.time-slot-button.selected {
+  background: #445e8d;
+  color: white;
+  border-color: #445e8d;
+}
+
+.time-slot-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Schedule Class for Subject button (smaller action button used in scheduling) */
+.schedule-subject-button {
+  padding: 0.6rem 0.85rem;
+  border-radius: 8px;
+  border: none;
+  background: #28a745; /* changed to green */
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.12s ease;
+  box-shadow: 0 6px 14px rgba(40,167,69,0.08);
+}
+
+.schedule-subject-button:hover:not(:disabled) {
+  background: #218838; /* darker green on hover */
+  transform: translateY(-1px);
+}
+
+.schedule-subject-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.schedule-subject-button:disabled {
+  background: #9aa6b8;
+  opacity: 0.75;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Inline schedule button shown next to each subject in student cards */
+.schedule-subject-inline-button {
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid rgba(68,94,141,0.08);
+  background: #445e8d;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.schedule-subject-inline-button:hover:not(:disabled) {
+  background: #3a5080;
+  transform: translateY(-1px);
+}
+
+.student-card {
+  background: #fff;
+}
+
+/* Small badge used to display tutor availability slots inside tutor cards */
+.time-slot-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  background: #f1f5fb;
+  color: #445e8d;
+  font-size: 0.82rem;
+  border: 1px solid #e6eef8;
+  margin-right: 0.4rem;
+}
+
+/* Slightly tighter padding for small tutor cards */
+.tutor-card.small {
+  padding: 0.75rem;
+  min-height: 100px;
+}
+
+/* Button Row */
+.button-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.back-button {
+  flex: 0 0 auto;
+  padding: 1rem 1.5rem;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.back-button:hover:not(:disabled) {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+.back-button:disabled {
+  background: #adb5bd;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.button-row .registration-button {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .registration-page {
+    padding: 1rem;
+  }
+  
+  .registration-container {
+    padding: 2rem;
+    max-width: 100%;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .form-group.half,
+  .form-group.quarter,
+  .form-group.third {
+    flex: 1;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .logo h1 {
+    font-size: 1.75rem;
+  }
+  
+  .subjects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .button-row {
+    flex-direction: column;
+  }
+  
+  .back-button {
+    order: 2;
+  }
+  
+  .button-row .registration-button {
+    order: 1;
+  }
+  
+  .circle-1,
+  .circle-2,
+  .circle-3 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .registration-container {
+    padding: 1.5rem;
+  }
+  
+  .logo {
+    gap: 0.5rem;
+  }
+  
+  .logo i {
+    font-size: 2rem;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+}

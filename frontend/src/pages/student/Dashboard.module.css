@@ -1,0 +1,1856 @@
+/* Simple Flat UI Design - Student Dashboard */
+
+.dashboard {
+  min-height: 100vh;
+  background: #f8f9fa;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Simple Tab Navigation */
+.modernTabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  background: #ffffff;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.modernTabButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: #6c757d;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.modernTabButton:hover {
+  background: #f8f9fa;
+  color: #495057;
+}
+
+.modernTabButton.active {
+  background: #445e8d;
+  color: white;
+}
+
+.assignmentsContent {
+  padding: 20px;
+}
+
+.assignmentsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.assignmentCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+}
+
+.assignmentCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.assignmentCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.assignmentCard.assigned {
+  border-top: 3px solid #ffc107;
+}
+
+.assignmentCard.inprogress {
+  border-top: 3px solid #17a2b8;
+}
+
+.assignmentCard.completed {
+  border-top: 3px solid #28a745;
+}
+
+.assignmentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.statusBadge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.statusBadge.assigned {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.statusBadge.inprogress {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.statusBadge.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.assignmentTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+}
+
+.assignmentSubject {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin: 0 0 1rem 0;
+}
+
+.assignmentMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dueDate {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.assignmentTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
+
+.assignmentMeta {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.dateInfo {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.startDate, .dueDate {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.instructions {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.assigned .statusBadge {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.inprogress .statusBadge {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.completed .statusBadge {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.startButton {
+  width: 100%;
+  padding: 12px;
+  background: #445e8d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.startButton:hover {
+  background: #3a5078;
+  transform: translateY(-2px);
+}
+
+.startButton:hover {
+  background: #3a5078;
+}
+
+.assignmentsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.modernTabButton i {
+  font-size: 1.1rem;
+}
+
+.notificationBadge {
+  background: #dc3545;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Big Start Section */
+.startSection {
+  margin-bottom: 2rem;
+}
+
+.bigStartCard {
+  background: linear-gradient(135deg, #445e8d 0%, #3a5078 100%);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(68, 94, 141, 0.3);
+}
+
+.startContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.startContent p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.bigStartButton {
+  background: white;
+  color: #445e8d;
+  border: none;
+  border-radius: 50px;
+  padding: 1.25rem 3rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.actionButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bigStartButton {
+  background: white;
+  color: #445e8d;
+  border: none;
+  border-radius: 50px;
+  padding: 1.25rem 3rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.bigStartButton:hover:not(:disabled) {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  /* Removed transform to prevent shaking */
+}
+
+.bigStartButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.bigStartButton i {
+  font-size: 1.4rem;
+}
+
+/* Button states for different class statuses */
+.bigStartButton.active {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  animation: pulse 2s infinite;
+}
+
+.bigStartButton.upcoming {
+  background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
+  color: #212529;
+}
+
+.bigStartButton.ended {
+  background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+  opacity: 0.7;
+}
+
+.bigStartButton.none {
+  background: white;
+  color: #445e8d;
+  border: 2px solid #445e8d;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+  }
+}
+
+.studyCalendarButton {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.studyCalendarButton:hover {
+  background: white;
+  color: #445e8d;
+  /* Removed transform to prevent shaking */
+}
+
+.classInfo {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.classInfo span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Homework Section */
+.homeworkSection {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.homeworkHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.homeworkHeader h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.homeworkStats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.homeworkStats .statItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.homeworkStats .statItem i {
+  font-size: 1rem;
+}
+
+.emptyHomework {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+}
+
+.emptyHomework i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #dee2e6;
+}
+
+.emptyHomework h4 {
+  margin-bottom: 0.5rem;
+  color: #495057;
+}
+
+.homeworkList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.homeworkCard {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homeworkCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.homeworkCard.completed {
+  border-left: 4px solid #28a745;
+  background: #f8fff8;
+}
+
+.homeworkCard.inprogress {
+  border-left: 4px solid #445e8d;
+  background: #f8fbff;
+}
+
+.homeworkCard.assigned {
+  border-left: 4px solid #ffc107;
+  background: #fffdf8;
+}
+
+.homeworkMain {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.homeworkIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.homeworkCard.completed .homeworkIcon {
+  background: #d4edda;
+  color: #28a745;
+}
+
+.homeworkCard.inprogress .homeworkIcon {
+  background: #cce7ff;
+  color: #445e8d;
+}
+
+.homeworkCard.assigned .homeworkIcon {
+  background: #fff3cd;
+  color: #ffc107;
+}
+
+.homeworkInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.homeworkInfo h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.homeworkSubject {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.homeworkMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.dueDate {
+  color: #6c757d;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex-shrink: 0;
+}
+
+.statusBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.statusBadge.completed {
+  background: #28a745;
+  color: white;
+}
+
+.statusBadge.inprogress {
+  background: #445e8d;
+  color: white;
+}
+
+.statusBadge.assigned {
+  background: #ffc107;
+  color: #212529;
+}
+
+.homeworkActions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.studyDetailsBtn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.studyDetailsBtn:hover {
+  background: #5a6268;
+}
+
+.startHomeworkBtn {
+  background: #445e8d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.startHomeworkBtn:hover {
+  background: #3a5078;
+}
+
+/* Style for View button on completed assignments */
+.startHomeworkBtn.viewBtn {
+  background: #28a745;
+  color: white;
+}
+
+.startHomeworkBtn.viewBtn:hover {
+  background: #218838;
+}
+
+/* Study Calendar Section */
+.studyCalendarSection {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  animation: slideDown 0.3s ease;
+}
+
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.calendarHeader h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.closeCalendarBtn {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeCalendarBtn:hover {
+  background: #e9ecef;
+}
+
+.monthControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.monthBtn {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.monthBtn:hover {
+  background: #e9ecef;
+}
+
+.monthSelector h4 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background: #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.calendarDay {
+  background: white;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.calendarDay:hover {
+  background: #f8f9fa;
+}
+
+.calendarDay.today {
+  background: #e3f2fd;
+  font-weight: 600;
+}
+
+.calendarDay.completed {
+  background: #d4edda;
+}
+
+.calendarDay.inProgress {
+  background: #cce7ff;
+}
+
+.calendarDay.pending {
+  background: #fff3cd;
+}
+
+.calendarDay.noTasks {
+  background: white;
+  cursor: default;
+}
+
+.dayNumber {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #495057;
+}
+
+.dayIndicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskCount {
+  background: #445e8d;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.emptyDay {
+  background: #f8f9fa;
+  min-height: 80px;
+}
+
+.calendarLegend {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.legendDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.legendDot.completed {
+  background: #28a745;
+}
+
+.legendDot.inProgress {
+  background: #445e8d;
+}
+
+.legendDot.pending {
+  background: #ffc107;
+}
+
+.legendDot.noTasks {
+  background: #dee2e6;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .startContent h2 {
+    font-size: 2rem;
+  }
+  
+  .startContent p {
+    font-size: 1rem;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+  }
+  
+  .bigStartButton {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .studyCalendarButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .classInfo {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .homeworkCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .homeworkActions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .homeworkStats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .homeworkHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .calendarGrid {
+    gap: 2px;
+  }
+  
+  .calendarDay {
+    min-height: 60px;
+  }
+  
+  .calendarLegend {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Overview Content */
+.overviewContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Welcome Section */
+.welcomeSection {
+  margin-bottom: 1rem;
+}
+
+.welcomeCard {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e9ecef;
+}
+
+.welcomeText h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 0.5rem;
+}
+
+.welcomeText p {
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.welcomeImage {
+  display: flex;
+  align-items: center;
+}
+
+.avatarContainer {
+  position: relative;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #445e8d;
+  object-fit: cover;
+}
+
+.statusBadge {
+  /* position: absolute; */
+  bottom: -5px;
+  /* right: -5px; */
+  background: #28a745;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* Section Headings */
+.sectionHeading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Stats Container */
+.statsContainer {
+  margin-bottom: 2rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.modernStatCard {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #e9ecef;
+  transition: border-color 0.2s ease;
+}
+
+.modernStatCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.statIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #445e8d, #445e8d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.statContent {
+  flex: 1;
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  line-height: 1;
+}
+
+.statLabel {
+  color: #718096;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.statChange {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.statChange.positive {
+  color: #48bb78;
+}
+
+.statChange.negative {
+  color: #f56565;
+}
+
+.statChange.neutral {
+  color: #718096;
+}
+
+/* Quick Actions */
+.quickActionsContainer {
+  margin-bottom: 2rem;
+}
+
+.quickActionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.modernActionCard {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.modernActionCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.actionIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #445e8d, #445e8d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.actionContent {
+  flex: 1;
+}
+
+.actionContent h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.actionContent p {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.actionArrow {
+  color: #cbd5e0;
+  transition: all 0.3s ease;
+}
+
+.modernActionCard:hover .actionArrow {
+  color: #445e8d;
+  transform: translateX(5px);
+}
+
+/* Schedule Timeline */
+.scheduleContainer {
+  margin-bottom: 2rem;
+}
+
+.scheduleTimeline {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.timelineItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  position: relative;
+}
+
+.timelineItem:last-child {
+  border-bottom: none;
+}
+
+.timelineItem.currentItem {
+  background: rgba(68, 94, 141, 0.1);
+  border-radius: 12px;
+  margin: 0 -1rem;
+  padding: 1rem;
+}
+
+.timelineDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #cbd5e0;
+  flex-shrink: 0;
+}
+
+.currentItem .timelineDot {
+  background: #445e8d;
+  box-shadow: 0 0 0 4px rgba(68, 94, 141, 0.3);
+}
+
+.timelineTime {
+  font-weight: 600;
+  color: #4a5568;
+  min-width: 80px;
+}
+
+.timelineContent {
+  flex: 1;
+}
+
+.timelineContent h4 {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.timelineContent p {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.currentIndicator {
+  background: #445e8d;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Activity Feed */
+.activityContainer {
+  margin-bottom: 2rem;
+}
+
+.activityFeed {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.activityItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.activityItem:last-child {
+  border-bottom: none;
+}
+
+.activityIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ffd89b, #19547b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+}
+
+.activityContent h4 {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.activityContent p {
+  color: #718096;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.activityTime {
+  color: #a0aec0;
+  font-size: 0.8rem;
+}
+
+/* Assignments Content */
+.assignmentsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.assignmentsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.assignmentFilters {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filterBtn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background: rgba(68, 94, 141, 0.1);
+  color: #445e8d;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterBtn:hover,
+.filterBtn.active {
+  background: #445e8d;
+  color: white;
+}
+
+.assignmentsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.assignmentCard {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.assignmentCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.assignmentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.priorityBadge,
+.statusBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.priorityBadge.high {
+  background: rgba(245, 101, 101, 0.2);
+  color: #f56565;
+}
+
+.priorityBadge.medium {
+  background: rgba(237, 137, 54, 0.2);
+  color: #ed8936;
+}
+
+.priorityBadge.low {
+  background: rgba(72, 187, 120, 0.2);
+  color: #48bb78;
+}
+
+.statusBadge.pending {
+  background: rgba(237, 137, 54, 0.2);
+  color: #ed8936;
+}
+
+.statusBadge.in-progress {
+  background: rgba(66, 153, 225, 0.2);
+  color: #4299e1;
+}
+
+.statusBadge.completed {
+  background: rgba(72, 187, 120, 0.2);
+  color: #48bb78;
+}
+
+.assignmentBody {
+  margin-bottom: 1.5rem;
+}
+
+.assignmentTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.assignmentSubject {
+  color: #718096;
+  margin-bottom: 1rem;
+}
+
+.assignmentMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dueDate {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.assignmentActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.primaryBtn {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #445e8d, #445e8d);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(68, 94, 141, 0.3);
+}
+
+.primaryBtn:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.7;
+}
+
+.primaryBtn:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.secondaryBtn {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: white;
+  color: #718096;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background: #f7fafc;
+  border-color: #cbd5e0;
+}
+
+/* Classes Content */
+.classesContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.classesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.headerControls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.currentTime {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(68, 94, 141, 0.1);
+  border: 1px solid rgba(68, 94, 141, 0.2);
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  font-weight: 500;
+  color: #445e8d;
+  font-size: 0.9rem;
+}
+
+.currentTime i {
+  color: #445e8d;
+  font-size: 0.9rem;
+}
+
+.classesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+
+.classCard {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #e9ecef;
+  transition: border-color 0.2s ease;
+}
+
+.classCard:hover {
+  border-color: #445e8d;
+}
+
+.classHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.classIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: #445e8d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.classInfo {
+  flex: 1;
+}
+
+.className {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 0.25rem;
+}
+
+.classTeacher {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.classBody {
+  margin-bottom: 1.5rem;
+}
+
+.classStats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statLabel {
+  color: #6c757d;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.statValue {
+  color: #212529;
+  font-weight: 600;
+}
+
+.meetingSection {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.classActions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Simple Loading and Error States */
+.loadingContainer,
+.errorContainer,
+.emptyState {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 3rem;
+  text-align: center;
+  border: 1px solid #e9ecef;
+}
+
+.loadingContainer i,
+.errorContainer i,
+.emptyState i {
+  font-size: 3rem;
+  color: #adb5bd;
+  margin-bottom: 1rem;
+}
+
+.retryBtn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #445e8d;
+  border-radius: 6px;
+  background: white;
+  color: #445e8d;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.retryBtn:hover {
+  background: #445e8d;
+  color: white;
+}
+
+/* Clean Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .modernTabs {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .modernTabButton {
+    justify-content: center;
+  }
+
+  .welcomeCard {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .welcomeText h2 {
+    font-size: 1.5rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .classesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .classActions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .modernTabButton span {
+    display: none;
+  }
+
+  .modernTabButton {
+    padding: 1rem;
+  }
+}
+
+/* Simple Join Button Styles */
+.joinBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.joinBtn:not(.disabled) {
+  background: #28a745;
+  color: white;
+}
+
+.joinBtn:not(.disabled):hover {
+  background: #218838;
+}
+
+.joinBtn.inProgress {
+  background: #fd7e14;
+  color: white;
+}
+
+.joinBtn.disabled {
+  background: #6c757d;
+  color: white;
+  cursor: not-allowed;
+}
+
+.joinBtn.disabled:hover {
+  background: #6c757d;
+}
+
+/* Simple Class Card Status Styles */
+.classCard.canJoin {
+  border-left: 3px solid #28a745;
+}
+
+.classCard.inProgress {
+  border-left: 3px solid #fd7e14;
+}
+
+.classCard.tooEarly {
+  border-left: 3px solid #445e8d;
+}
+
+.classCard.ended {
+  border-left: 3px solid #6c757d;
+  opacity: 0.7;
+}
+
+.classCard.notToday {
+  border-left: 3px solid #6f42c1;
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.05), rgba(255, 255, 255, 0.95));
+}
+
+/* Schedule Info Section */
+.scheduleInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 12px;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.scheduleItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #4a5568;
+}
+
+.scheduleItem i {
+  color: #445e8d;
+  width: 16px;
+  text-align: center;
+}
+
+/* Time Status Message */
+.timeStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.timeStatus.canJoin {
+  background: rgba(72, 187, 120, 0.1);
+  color: #2f855a;
+  border: 1px solid rgba(72, 187, 120, 0.2);
+}
+
+.timeStatus.inProgress {
+  background: rgba(237, 137, 54, 0.1);
+  color: #c05621;
+  border: 1px solid rgba(237, 137, 54, 0.2);
+}
+
+.timeStatus.tooEarly {
+  background: rgba(66, 153, 225, 0.1);
+  color: #2b6cb0;
+  border: 1px solid rgba(66, 153, 225, 0.2);
+}
+
+.timeStatus.ended {
+  background: rgba(156, 163, 175, 0.1);
+  color: #6b7280;
+  border: 1px solid rgba(156, 163, 175, 0.2);
+}
+
+.timeStatus.notToday {
+  background: rgba(167, 139, 250, 0.1);
+  color: #7c3aed;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+/* Status Badge Updates */
+.statusBadge.canJoin {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+}
+
+.statusBadge.inProgress {
+  background: linear-gradient(135deg, #ed8936, #dd6b20);
+  color: white;
+}
+
+.statusBadge.tooEarly {
+  background: linear-gradient(135deg, #4299e1, #3182ce);
+  color: white;
+}
+
+.statusBadge.ended {
+  background: linear-gradient(135deg, #9ca3af, #6b7280);
+  color: white;
+}
+
+.statusBadge.notToday {
+  background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+  color: white;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(237, 137, 54, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(237, 137, 54, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(237, 137, 54, 0);
+  }
+}
+
+@keyframes borderPulse {
+  0% {
+    border-left-color: #ed8936;
+  }
+  50% {
+    border-left-color: #f6ad55;
+  }
+  100% {
+    border-left-color: #ed8936;
+  }
+}

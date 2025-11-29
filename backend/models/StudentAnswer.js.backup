@@ -1,0 +1,175 @@
+const mongoose = require('mongoose');
+
+const studentAnswerSchema = new mongoose.Schema({
+  assignmentId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'HomeworkAssignment',
+    required: true
+  },
+  studentId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  session_id: {
+    type: String,
+    default: null
+  },
+  exercise_id: {
+    type: String,
+    default: 'reading_comprehension_001'
+  },
+  student_info: {
+    date_completed: {
+      type: Date,
+      default: null
+    },
+    time_started: {
+      type: Date,
+      default: null
+    },
+    time_completed: {
+      type: Date,
+      default: null
+    },
+    total_time_ms: {
+      type: Number,
+      default: null
+    }
+  },
+  pages: [{
+    page_id: {
+      type: Number,
+      required: true
+    },
+    page_number: {
+      type: Number,
+      required: true
+    },
+    questions: [{
+      question_id: {
+        type: String,
+        required: true
+      },
+      question_type: {
+        type: String,
+        enum: ['mcq_multiple', 'mcq_single', 'fill_in_the_blanks'],
+        required: true
+      },
+      answers_selected: [{
+        type: String
+      }],
+      correct_answers: [{
+        type: String
+      }],
+      is_correct: {
+        type: Boolean,
+        default: null
+      },
+      blanks: {
+        type: mongoose.Schema.Types.Mixed,
+        default: null
+      }
+    }]
+  }],
+  // Legacy fields for backward compatibility
+  title: {
+    type: String,
+    default: "Nikolai's Journey - Reading Exercise"
+  },
+  totalPages: {
+    type: Number,
+    default: 2
+  },
+  currentPage: {
+    type: Number,
+    default: 0
+  }
+}, {
+  timestamps: true
+});
+
+// Index for efficient queries
+studentAnswerSchema.index({ assignmentId: 1, studentId: 1 });
+
+const StudentAnswer = mongoose.model('StudentAnswer', studentAnswerSchema);
+
+module.exports = StudentAnswer;
+        text: String,
+        correct: Boolean
+      }],
+      template: String,
+      blanks: [{
+        id: String,
+        correctAnswers: [String],
+        position: Number,
+        studentAnswer: String
+      }],
+      allowMultiple: Boolean,
+      studentAnswer: {
+        selected: [Number],
+        isCorrect: Boolean
+      }
+    }]
+  }],
+  grading: {
+    instantFeedback: {
+      type: Boolean,
+      default: false
+    },
+    showCorrectAnswers: {
+      type: Boolean,
+      default: true
+    },
+    allowRetries: {
+      type: Boolean,
+      default: false
+    }
+  },
+  analytics: {
+    trackTimePerQuestion: {
+      type: Boolean,
+      default: true
+    },
+    trackAttempts: {
+      type: Boolean,
+      default: true
+    },
+    trackCompletion: {
+      type: Boolean,
+      default: true
+    }
+  },
+  summary: {
+    totalQuestions: {
+      type: Number,
+      default: 0
+    },
+    correct: {
+      type: Number,
+      default: 0
+    },
+    percentage: {
+      type: Number,
+      default: 0
+    },
+    status: {
+      type: String,
+      enum: ['not_started', 'in_progress', 'completed'],
+      default: 'not_started'
+    }
+  },
+  lastUpdated: {
+    type: Date,
+    default: Date.now
+  }
+}, {
+  timestamps: true
+});
+
+// Index for efficient queries
+studentAnswerSchema.index({ assignmentId: 1, studentId: 1 });
+
+const StudentAnswer = mongoose.model('StudentAnswer', studentAnswerSchema);
+
+// TODO: Convert to Sequelize model if needed. Remove legacy export.
