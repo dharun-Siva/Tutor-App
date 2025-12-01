@@ -51,6 +51,7 @@ const stripePaymentRoutes = require('./routes/payments-stripe');
 const { title } = require('process');
 
 const app = express();
+
 const PORT = process.env.PORT || 5000;
 
 // Trust proxy configuration for rate limiting
